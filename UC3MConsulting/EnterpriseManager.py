@@ -4,10 +4,20 @@ from .EnterpriseManagementException import EnterpriseManagementException
 from .EnterpriseRequest import EnterpriseRequest
 
 class EnterpriseManager:
+    """
+    Manages enterprise-related operations such as CIF validation
+    and request creation from JSON input.
+    """
     def __init__(self):
         pass
 
     def ValidateCIF( self, CiF ):
+        """
+        Validate a CIF identifier.
+
+        Returns True if the CIF is valid according to format and
+        checksum rules, otherwise False.
+        """
         # PLEASE INCLUDE HERE THE CODE FOR VALIDATING THE GUID
         # 1) Basic format: [Letter][7 digits][Control]
         if not isinstance(CiF, str):
@@ -57,6 +67,13 @@ class EnterpriseManager:
         # RETURN TRUE IF THE GUID IS RIGHT, OR FALSE IN OTHER CASE
 
     def ReadproductcodefromJSON( self, fi ):
+        """
+        Read enterprise data from a JSON file and return an
+        EnterpriseRequest object.
+
+        Raises EnterpriseManagementException if the file is invalid
+        or contains incorrect data.
+        """
 
         try:
             with open(fi) as F:
