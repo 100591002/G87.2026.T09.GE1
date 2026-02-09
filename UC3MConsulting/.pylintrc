@@ -316,7 +316,7 @@ max-parents=7
 max-positional-arguments=5
 
 # Maximum number of public methods for a class (see R0904).
-max-public-methods=20
+max-public-methods=1
 
 # Maximum number of return / yield for function / method body.
 max-returns=6
@@ -352,7 +352,8 @@ indent-string='    '
 # Maximum number of characters on a single line. Pylint's default of 100 is
 # based on PEP 8's guidance that teams may choose line lengths up to 99
 # characters.
-max-line-length=100
+#max-line-length=100
+max-line-length=79
 
 # Maximum number of lines in a module.
 max-module-lines=1000
@@ -372,8 +373,6 @@ single-line-if-stmt=no
 # one.
 allow-any-import-level=
 
-# Allow explicit reexports by alias from a package __init__.
-allow-reexport-from-package=no
 
 # Allow wildcard imports from modules that define __all__.
 allow-wildcard-with-all=no
