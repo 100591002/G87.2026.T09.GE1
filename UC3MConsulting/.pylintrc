@@ -123,7 +123,9 @@ argument-naming-style=snake_case
 #argument-rgx=
 
 # Naming style matching correct attribute names.
-attr-naming-style=snake_case
+#MODIFIED RULE
+#attr-naming-style=snake-case
+attr-naming-style=camelCase
 
 # Regular expression matching correct attribute names. Overrides attr-naming-
 # style. If left empty, attribute names will be checked with the set naming
@@ -209,14 +211,18 @@ inlinevar-naming-style=any
 #inlinevar-rgx=
 
 # Naming style matching correct method names.
-method-naming-style=snake_case
+#MODIFIED RULE
+#method-naming-style=snake_case
+method-naming-style=PascalCase
 
 # Regular expression matching correct method names. Overrides method-naming-
 # style. If left empty, method names will be checked with the set naming style.
 #method-rgx=
 
 # Naming style matching correct module names.
-module-naming-style=snake_case
+#MODIFIED RULE
+#module-naming-style=snake_case
+module-naming-style=PascalCase
 
 # Regular expression matching correct module names. Overrides module-naming-
 # style. If left empty, module names will be checked with the set naming style.
@@ -253,7 +259,9 @@ property-classes=abc.abstractproperty
 #typevartuple-rgx=
 
 # Naming style matching correct variable names.
-variable-naming-style=snake_case
+#MODIFIED RULE
+#variable-naming-style=snake_case
+variable-naming-style=UPPER_CASE
 
 # Regular expression matching correct variable names. Overrides variable-
 # naming-style. If left empty, variable names will be checked with the set
@@ -265,6 +273,7 @@ variable-naming-style=snake_case
 
 # Warn about protected attribute access inside special methods
 check-protected-access-in-special-methods=no
+
 
 # List of method names used to declare (i.e. assign) instance attributes.
 defining-attr-methods=__init__,
