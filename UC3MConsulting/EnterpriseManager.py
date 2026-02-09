@@ -11,7 +11,7 @@ class EnterpriseManager:
     def __init__(self):
         pass
 
-    def ValidateCIF( self, cIf ):
+    def ValidateCIF(self, cIf):
         """
         Validate a CIF identifier.
 

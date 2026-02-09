@@ -115,6 +115,8 @@ unsafe-load-any-extension=no
 [BASIC]
 
 # Naming style matching correct argument names.
+#MODIFIED RULE
+#argument-naming-style=snake_case
 argument-naming-style=camelCase
 
 # Regular expression matching correct argument names. Overrides argument-
@@ -168,6 +170,7 @@ class-naming-style=PascalCase
 #class-rgx=
 
 # Naming style matching correct constant names.
+#MODIFIED RULE
 #const-naming-style=UPPER_CASE
 const-naming-style=snake_case
 
@@ -178,6 +181,7 @@ const-naming-style=snake_case
 
 # Minimum line length for functions/classes that require docstrings, shorter
 # ones are exempt.
+#MODIFIED RULE
 #docstring-min-length=-1
 docstring-min-length=10
 
@@ -318,6 +322,7 @@ max-bool-expr=5
 max-branches=12
 
 # Maximum number of locals for function / method body.
+#MODIFIED RULE
 #max-locals=15
 max-locals=16
 
@@ -328,6 +333,7 @@ max-parents=7
 max-positional-arguments=5
 
 # Maximum number of public methods for a class (see R0904).
+#MODIFIED RULE
 #max-public-methods=10
 max-public-methods=7
 
@@ -365,6 +371,7 @@ indent-string='    '
 # Maximum number of characters on a single line. Pylint's default of 100 is
 # based on PEP 8's guidance that teams may choose line lengths up to 99
 # characters.
+#MODIFIED RULE
 #max-line-length=100
 max-line-length=99
 

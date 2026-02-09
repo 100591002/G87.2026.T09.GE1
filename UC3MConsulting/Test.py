@@ -11,5 +11,5 @@ EXAMPLES = [
     None,         # invalid type
 ]
 
-for E in EXAMPLES:
-    print(E, "->", em.ValidateCIF(E))
+for e in EXAMPLES:
+    print(e, "->", em.ValidateCIF(e))

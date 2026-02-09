@@ -3,9 +3,9 @@ from datetime import datetime
 
 
 class EnterpriseRequest:
-    def __init__(self, Cif,phOnE, eName):
+    def __init__(self, cIf, phOnE, eName):
         self.enterpriseName = eName
-        self.cIf = Cif
+        self.cIf = cIf
         self.phone = phOnE
         JUST_NOW = datetime.utcnow()
         self.__timeStamp = datetime.timestamp(JUST_NOW)
