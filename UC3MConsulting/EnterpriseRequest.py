@@ -7,8 +7,8 @@ class EnterpriseRequest:
         self.enterpriseName = ENAME
         self.cIf = Cif
         self.phone = phOnE
-        justnow = datetime.utcnow()
-        self.__timeStamp = datetime.timestamp(justnow)
+        JUST_NOW = datetime.utcnow()
+        self.__timeStamp = datetime.timestamp(JUST_NOW)
 
     def __str__(self):
         return "Enterprise:" + json.dumps(self.__dict__)

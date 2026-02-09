@@ -1,8 +1,8 @@
 from  .EnterpriseManager import EnterpriseManager
 
-em = EnterpriseManager()
+EM = EnterpriseManager()
 
-tests = [
+EXAMPLES = [
     "B12345674",  # might be True or False depending on control
     "A00003450",
     "P2345678H",
@@ -11,5 +11,5 @@ tests = [
     None,         # invalid type
 ]
 
-for t in tests:
-    print(t, "->", em.ValidateCIF(t))
+for E in EXAMPLES:
+    print(E, "->", EM.ValidateCIF(E))

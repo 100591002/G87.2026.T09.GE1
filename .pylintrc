@@ -259,7 +259,9 @@ property-classes=abc.abstractproperty
 #typevartuple-rgx=
 
 # Naming style matching correct variable names.
-variable-naming-style=snake_case
+#MODIFIED RULE
+#variable-naming-style=snake_case
+variable-naming-style=UPPER_CASE
 
 # Regular expression matching correct variable names. Overrides variable-
 # naming-style. If left empty, variable names will be checked with the set
