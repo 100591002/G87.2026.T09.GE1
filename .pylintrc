@@ -123,7 +123,9 @@ argument-naming-style=snake_case
 #argument-rgx=
 
 # Naming style matching correct attribute names.
-attr-naming-style=snake_case
+#MODIFIED RULE
+#attr-naming-style=snake-case
+attr-naming-style=camelCase
 
 # Regular expression matching correct attribute names. Overrides attr-naming-
 # style. If left empty, attribute names will be checked with the set naming
@@ -269,6 +271,7 @@ variable-naming-style=snake_case
 
 # Warn about protected attribute access inside special methods
 check-protected-access-in-special-methods=no
+
 
 # List of method names used to declare (i.e. assign) instance attributes.
 defining-attr-methods=__init__,
