@@ -1,3 +1,12 @@
+"""
+Enterprise management services.
+
+This module defines the EnterpriseManager class, which provides
+functionality for validating CIF identifiers and creating
+EnterpriseRequest objects from JSON input, raising domain-specific
+exceptions when errors occur.
+"""
+
 import re
 import json
 from .EnterpriseManagementException import EnterpriseManagementException
@@ -63,7 +72,7 @@ class EnterpriseManager:
             return CONTROL == EXPECTED_LETTER
 
         # For other CIF letters, accept either (common CIF behavior)
-        return (CONTROL == EXPECTED_DIGIT) or (CONTROL == EXPECTED_LETTER)
+        return CONTROL in (EXPECTED_DIGIT, EXPECTED_LETTER)
         # RETURN TRUE IF THE GUID IS RIGHT, OR FALSE IN OTHER CASE
 
     def ReadproductcodefromJSON( self, fi ):
@@ -76,7 +85,7 @@ class EnterpriseManager:
         """
 
         try:
-            with open(fi) as F:
+            with open(fi, encoding="utf-8") as F:
                 DATA = json.load(F)
         except FileNotFoundError as E:
             raise EnterpriseManagementException("Wrong file or file path") from E
