@@ -11,7 +11,7 @@ class EnterpriseManager:
     def __init__(self):
         pass
 
-    def ValidateCIF( self, CiF ):
+    def ValidateCIF( self, cIf ):
         """
         Validate a CIF identifier.
 
@@ -20,10 +20,10 @@ class EnterpriseManager:
         """
         # PLEASE INCLUDE HERE THE CODE FOR VALIDATING THE GUID
         # 1) Basic format: [Letter][7 digits][Control]
-        if not isinstance(CiF, str):
+        if not isinstance(cIf, str):
             return False
 
-        CIF = CiF.strip().upper()
+        CIF = cIf.strip().upper()
         if not re.fullmatch(r"[A-Z]\d{7}[A-Z0-9]", CIF):
             return False
 

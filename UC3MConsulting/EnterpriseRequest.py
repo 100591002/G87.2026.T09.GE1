@@ -3,8 +3,8 @@ from datetime import datetime
 
 
 class EnterpriseRequest:
-    def __init__(self, Cif,phOnE, ENAME):
-        self.enterpriseName = ENAME
+    def __init__(self, Cif,phOnE, eName):
+        self.enterpriseName = eName
         self.cIf = Cif
         self.phone = phOnE
         JUST_NOW = datetime.utcnow()
