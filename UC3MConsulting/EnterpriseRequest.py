@@ -12,7 +12,7 @@ class EnterpriseRequest:
         self.cIf = cIf
         self.phone = phOnE
         JUST_NOW = datetime.utcnow()
-        self.__timeStamp = datetime.timestamp(JUST_NOW)
+        self._timeStamp = datetime.timestamp(JUST_NOW)
 
     def __str__(self):
         return "Enterprise:" + json.dumps(self.__dict__)
