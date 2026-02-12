@@ -7,10 +7,10 @@ from datetime import datetime
 class EnterpriseRequest:
     """Represents an enterprise request containing CIF, phone, name, and a timestamp."""
 
-    def __init__(self, cIf, phOnE, eName):
+    def __init__(self, cIf, phone, eName):
         self.enterpriseName = eName
         self.cIf = cIf
-        self.phone = phOnE
+        self.phone = phone
         JUST_NOW = datetime.utcnow()
         self._timeStamp = datetime.timestamp(JUST_NOW)
 
