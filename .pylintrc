@@ -340,7 +340,8 @@ max-positional-arguments=5
 max-public-methods=7
 
 # Maximum number of return / yield for function / method body.
-max-returns=6
+#max-returns=6
+max-returns=5
 
 # Maximum number of statements in function / method body.
 max-statements=50
