@@ -20,3 +20,4 @@ EXAMPLES = [
 
 for e in EXAMPLES:
     print(e, "->", em.ValidateCIF(e))
+print("all done!")
