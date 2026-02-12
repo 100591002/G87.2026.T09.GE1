@@ -40,11 +40,13 @@ class EnterpriseManager:
         DIGITS = CIF[1:8]  # 7-digit block
         CONTROL = CIF[8]  # last char
 
-        # 2) Step 1: sum digits in even positions of the block (positions 2,4,6)
+        # 2) Step 1: sum digits in even positions of the
+        # block (positions 2,4,6)
         # positions are 1..7 left-to-right, so indices 1,3,5
         EVEN_SUM = int(DIGITS[1]) + int(DIGITS[3]) + int(DIGITS[5])
 
-        # 3) Step 2: odd positions (1,3,5,7) -> multiply by 2, sum digits if needed
+        # 3) Step 2: odd positions (1,3,5,7)
+        # -> multiply by 2, sum digits if needed
         ODD_SUM = 0
         for IDX in (0, 2, 4, 6):
             V = int(DIGITS[IDX]) * 2
@@ -55,7 +57,8 @@ class EnterpriseManager:
 
         # 5) Step 4: base digit
         UNITS = PARTIAL_SUM % 10
-        BASE_DIGIT = (10 - UNITS) % 10  # handles "if units is 0 -> base digit is 0"
+        # handles "if units is 0 -> base digit is 0"
+        BASE_DIGIT = (10 - UNITS) % 10
 
         # 6) Step 5: control character rule + mapping table
         BASE_TO_LETTER = {0: "J", 1: "A", 2: "B", 3: "C", 4: "D",
@@ -88,9 +91,13 @@ class EnterpriseManager:
             with open(fi, encoding="utf-8") as F:
                 DATA = json.load(F)
         except FileNotFoundError as E:
-            raise EnterpriseManagementException("Wrong file or file path") from E
+            raise EnterpriseManagementException(
+                "Wrong file or file path"
+            ) from E
         except json.JSONDecodeError as E:
-            raise EnterpriseManagementException("JSON Decode Error - Wrong JSON Format") from E
+            raise EnterpriseManagementException(
+                "JSON Decode Error - Wrong JSON Format"
+            ) from E
 
 
         try:
@@ -99,7 +106,9 @@ class EnterpriseManager:
             E_NAME = DATA["enterprise_name"]
             REQ = EnterpriseRequest(T_CIF, T_PHONE,E_NAME)
         except KeyError as E:
-            raise EnterpriseManagementException("JSON Decode Error - Invalid JSON Key") from E
+            raise EnterpriseManagementException(
+                "JSON Decode Error - Invalid JSON Key"
+            ) from E
         if not self.ValidateCIF(T_CIF) :
             raise EnterpriseManagementException("Invalid FROM IBAN")
         return REQ

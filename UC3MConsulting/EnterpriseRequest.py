@@ -5,7 +5,10 @@ from datetime import datetime
 
 
 class EnterpriseRequest:
-    """Represents an enterprise request containing CIF, phone, name, and a timestamp."""
+    """
+    Represents an enterprise request containing
+    CIF, phone, name, and a timestamp.
+    """
 
     def __init__(self, cIf, phOnE, eName):
         self.enterpriseName = eName
