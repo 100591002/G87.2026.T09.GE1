@@ -339,7 +339,7 @@ max-positional-arguments=5
 # Maximum number of public methods for a class (see R0904).
 #MODIFIED RULE
 #max-public-methods=10
-max-public-methods=7
+max-public-methods=3
 
 # Maximum number of return / yield for function / method body.
 #MODIFIED RULE
